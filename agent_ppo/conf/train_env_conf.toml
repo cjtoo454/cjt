@@ -8,14 +8,14 @@ hyperparams_file = "agent_ppo/conf/ppo_lunarlander.yml"
 scale = 1.0
 bias = 0.0
 success_threshold = 200.0
-distance_weight = -140.0
-velocity_weight = -120.0
-angle_weight = -120.0
-leg_contact_bonus = 20.0
-main_engine_cost = 0.20
-side_engine_cost = 0.02
+distance_weight = -220.0
+velocity_weight = -100.0
+angle_weight = -100.0
+leg_contact_bonus = 10.0
+main_engine_cost = 0.15
+side_engine_cost = 0.005
 crash = -100.0
-landing = 100.0
+landing = 70.0
 
 [model]
 policy = "MlpPolicy"
@@ -48,7 +48,7 @@ eval_freq_steps = 25000
 n_eval_episodes = 20
 
 [real]
-obs_noise_std = 0.04
+obs_noise_std = 0.10
 action_delay_steps = 3
 default_action = 0
 noise_seed_offset = 2026
